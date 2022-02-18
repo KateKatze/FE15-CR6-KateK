@@ -1,1 +1,50 @@
-<p>cart works!</p>
+<!-- Cart -->
+<div class="container">
+    <div class="row">
+        <h1 class="mb-3">Cart</h1>
+        <div class="col-lg-5">
+            <div class="card border m-3">
+                <div class="card-header">
+                    <p>Dish name</p>
+                </div>
+                <img src="#" class="card-img-top h-100" alt="Austria">
+                <div class="card-body">
+                    <h5 class="card-title">Food</h5>
+                    <p class="card-text">Description</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <div class="card border m-3">
+                <div class="card-header">
+                    <p>Summary</p>
+                </div>
+                <img src="#" class="card-img-top h-100" alt="Austria">
+                <div class="card-body">
+                    <h5 class="card-title">Title</h5>
+                    <p class="card-text">Body</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Total amount</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Order contact form -->
+<div class="container mt-5">
+    <h1 class="mb-3">Order now</h1>
+    <p>Please, fill out this form so we can deliver the tasty dishes to you
+        <3</p>
+            <div class="container">
+                <form class="d-flex flex-column col-lg-4" [formGroup]="contact" (ngSubmit)="submitForm()">
+                    <input type="text" placeholder="Your First Name" formControlName="fName">
+                    <br>
+                    <input type="text" placeholder="Your Last Name" formControlName="phone">
+                    <br>
+                    <textarea type="text" placeholder="Your Message" rows="4" formControlName="textArea"></textarea>
+                    <input type="submit" class="btn btn-primary border-0 mt-3 mb-5 col-lg-3" value="Purchase">
+                </form>
+            </div>
+</div>

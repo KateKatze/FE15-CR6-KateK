@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-cart',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
+  contact = new FormGroup({
+    fName: new FormControl("",[Validators.required, Validators.minLength(2)]),
+    phone: new FormControl("", [Validators.required, Validators.minLength(2)]),
+    textArea: new FormControl("", [Validators.required, Validators.minLength(2)])
+  })
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  submitForm() {
+    if (this.contact.valid) {
+       var a = this.contact.value;
+    console.log(a);
+    }
   }
 
 }
