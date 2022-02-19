@@ -1,34 +1,39 @@
 <!-- Cart -->
-<div class="container mt-5">
-    <div class="row">
-
-        <div class="col-lg-5 border">
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-lg-5 col-md-5 col-sm-11 border m-1">
             <h1>Cart</h1>
             <hr>
             <h6> {{items.length}} items in your cart </h6>
             <hr>
-            <div class="card border col-lg-7" *ngFor="let item of items">
-                <ul style="list-style: none;">
-                    <li class=" row row-cols-2 aling-items-center">
-                        <div class="col-lg-2">
-                            <img [src]="item.img" class="card-img-top" style="height: 10vh; width: auto;" alt="menu">
-                        </div>
-                        <div class="col-lg-6">
-                            <h5 class="card-title"> {{item.name}} </h5>
-                            <p>Price: {{item.price | currency}} </p>
+
+            <div class="card mb-3" style="max-width: 540px;" *ngFor="let item of items">
+                <ul class="mt-1 mb-1" style="list-style: none;">
+                    <li>
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img [src]="item.img" class="card-img-top" alt="menu">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title"> {{item.name}} </h5>
+                                    <p>Price: {{item.price | currency}} </p>
+                                </div>
+                            </div>
 
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="col-lg-4 border ms-5">
+        <div class="col-lg-5 col-md-5 col-sm-11 border m-1">
             <h1>Receipt</h1>
-            <p>Items price: {{itemPrice}}</p>
-            <p>Service fee: {{serviceFee}}</p>
-            <p>Discount: {{discount}}</p>
             <hr>
-            <p class="text-bold">Total price (incl. VAT) {{totalPrice}}</p>
+            <p>Items price: {{itemPrice | currency}}</p>
+            <p>Service fee: {{serviceFee | currency}}</p>
+            <p>Discount: {{discount | currency}}</p>
+            <hr>
+            <p class="text-bold">Total price (incl. VAT) {{totalPrice | currency}}</p>
         </div>
     </div>
 </div>
