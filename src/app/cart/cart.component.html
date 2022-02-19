@@ -1,33 +1,27 @@
 <!-- Cart -->
-<div class="container">
-    <div class="row mt-5">
-        <h1 class="mb-3">Cart</h1>
-        <div class="col-lg-5">
-            <div class="card border m-3">
-                <div class="card-header">
-                    <p>Dish name</p>
-                </div>
-                <img src="#" class="card-img-top h-100" alt="Austria">
-                <div class="card-body">
-                    <h5 class="card-title">Food</h5>
-                    <p class="card-text">Description</p>
-                </div>
+<div class="container mt-5">
+    <div class="row">
+
+        <div class="card col-lg-7">
+            <h1>Cart</h1>
+            <div class="card-header">
+                <h6> {{items.length}} items in your cart </h6>
+            </div>
+            <div class="card-body border col-lg-7" *ngFor="let item of items">
+                <ul style="list-style: none;">
+                    <li>
+                        <img [src]="item.img" class="card-img-top" style="height: 100px;" alt="menu">
+                        <div class="card-body">
+                            <h5 class="card-title"> {{item.name}} </h5>
+                            <p>Price: {{item.price | currency}} </p>
+
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="col-lg-5">
-            <div class="card border m-3">
-                <div class="card-header">
-                    <p>Summary</p>
-                </div>
-                <img src="#" class="card-img-top h-100" alt="Austria">
-                <div class="card-body">
-                    <h5 class="card-title">Title</h5>
-                    <p class="card-text">Body</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Total amount</small>
-                </div>
-            </div>
+        <div class="col-lg-4">
+            <h1>Check</h1>
         </div>
     </div>
 </div>

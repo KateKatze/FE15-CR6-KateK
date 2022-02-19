@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators} from '@angular/forms';
+import { CartService } from '../cart.service';
+import { IProducts } from '../IProducts';
 
 @Component({
   selector: 'app-cart',
@@ -14,9 +16,11 @@ export class CartComponent implements OnInit {
     textArea: new FormControl("", [Validators.required, Validators.minLength(2)])
   })
 
-  constructor() { }
+  items: IProducts[] = [];
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
+    this.items = this.cartService.getItems();
   }
 
   submitForm() {
