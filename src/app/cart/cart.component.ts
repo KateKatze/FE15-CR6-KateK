@@ -19,6 +19,31 @@ export class CartComponent implements OnInit {
   items: IProducts[] = [];
   constructor(private cartService: CartService) { }
 
+  get itemPrice(): number{
+    let total: number = 0;
+    for(const item of this.items){
+      total += item.price;
+    }
+    return total;
+  }
+
+  get serviceFee():number{
+    return this.itemPrice * 0.1;
+  }
+
+  get discount(): number{
+    let total: number = this.itemPrice + this.serviceFee;
+    let discount: number = 0;
+    if (total >= 40){
+      discount = total * 0,15;
+    }
+    return discount;
+  }
+
+  get totalPrice (): number{
+    return (this.itemPrice + this.serviceFee);
+  }
+
   ngOnInit(): void {
     this.items = this.cartService.getItems();
   }

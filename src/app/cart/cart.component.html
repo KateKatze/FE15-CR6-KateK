@@ -2,16 +2,18 @@
 <div class="container mt-5">
     <div class="row">
 
-        <div class="card col-lg-7">
+        <div class="col-lg-5 border">
             <h1>Cart</h1>
-            <div class="card-header">
-                <h6> {{items.length}} items in your cart </h6>
-            </div>
-            <div class="card-body border col-lg-7" *ngFor="let item of items">
+            <hr>
+            <h6> {{items.length}} items in your cart </h6>
+            <hr>
+            <div class="card border col-lg-7" *ngFor="let item of items">
                 <ul style="list-style: none;">
-                    <li>
-                        <img [src]="item.img" class="card-img-top" style="height: 100px;" alt="menu">
-                        <div class="card-body">
+                    <li class=" row row-cols-2 aling-items-center">
+                        <div class="col-lg-2">
+                            <img [src]="item.img" class="card-img-top" style="height: 10vh; width: auto;" alt="menu">
+                        </div>
+                        <div class="col-lg-6">
                             <h5 class="card-title"> {{item.name}} </h5>
                             <p>Price: {{item.price | currency}} </p>
 
@@ -20,8 +22,13 @@
                 </ul>
             </div>
         </div>
-        <div class="col-lg-4">
-            <h1>Check</h1>
+        <div class="col-lg-4 border ms-5">
+            <h1>Receipt</h1>
+            <p>Items price: {{itemPrice}}</p>
+            <p>Service fee: {{serviceFee}}</p>
+            <p>Discount: {{discount}}</p>
+            <hr>
+            <p class="text-bold">Total price (incl. VAT) {{totalPrice}}</p>
         </div>
     </div>
 </div>
