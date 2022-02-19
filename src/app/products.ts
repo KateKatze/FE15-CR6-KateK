@@ -50,7 +50,7 @@ export const products = [
   
     {
         name: 'Spaghetti Bolognese',
-        img: 'https://cdn.pixabay.com/photo/2018/07/18/19/12/pasta-3547078__340.jpg',
+        img: 'https://cdn.pixabay.com/photo/2017/01/17/17/05/spaghetti-1987454__480.jpg',
         price: 8.99,
         description: 'Bolognese. Classic dish with our "Tasty Bites" Bolognese.',
         instock: true
@@ -58,7 +58,7 @@ export const products = [
   
     {
         name: 'Pizza Tonno',
-        img: 'https://cdn.pixabay.com/photo/2019/08/04/20/09/pizza-4384650__340.jpg',
+        img: 'https://cdn.pixabay.com/photo/2014/04/22/02/56/pizza-329523__340.jpg',
         price: 11.99,
         description: 'Pizza for the fish fans! Try it :P',
         instock: false
@@ -66,7 +66,7 @@ export const products = [
   
     {
         name: 'Lasagne',
-        img: 'https://cdn.pixabay.com/photo/2021/02/08/12/40/lasagna-5994612__340.jpg',
+        img: 'https://cdn.pixabay.com/photo/2021/02/04/12/48/food-5981242__340.jpg',
         price: 12.99,
         description: 'Meat, lasagne sheet, cheese, beschamel sauce, repeat - best of the best.',
         instock: true

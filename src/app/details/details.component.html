@@ -1,8 +1,8 @@
-<div class="container m-5">
-    <h2 class="mb-5 ms-5">Product details</h2>
+<div class="container">
+    <h2 class="mt-4 mb-4">Product details</h2>
 
-    <div class="card border m-3 col-lg-3" *ngIf="product">
-        <img [src]="product.img" class="card-img-top" style="height: 200px;" alt="menu">
+    <div class="card border mb-5" style="width: 18rem;" *ngIf="product">
+        <img [src]="product.img" class="card-img-top menupiccart" alt="menu">
         <div class="card-body">
             <h5 class="card-title"> {{product.name}} </h5>
             <p>Price: {{product.price}} </p>

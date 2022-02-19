@@ -1,1 +1,110 @@
-                /* You can add global styles to this file, and also import other style files */
+    /* homepage */
+    
+    @media screen and (max-width: 426px) {
+        .navbar-brand {
+            height: 20%;
+            width: 20%;
+        }
+        .btndesign {
+            padding: -3px;
+            width: 110px;
+            font-size: smaller;
+        }
+        .imagedesign {
+            height: 60%;
+            width: auto;
+            margin-bottom: -30px;
+        }
+        .textcont {
+            margin-top: -30px;
+        }
+        .lead {
+            font-size: medium;
+        }
+        .caropic {
+            height: 30vh;
+        }
+        .photosiz {
+            height: 40vh;
+            width: auto;
+        }
+        .aboutphsiz {
+            width: 100%;
+        }
+    }
+    
+    @media screen and (min-width: 426px) and (max-width: 769px) {
+        .navbar-brand {
+            height: 5%;
+            width: 15%;
+        }
+        .imagedesign {
+            height: 80%;
+            width: auto;
+        }
+        .caropic {
+            height: 40vh;
+        }
+        .aboutphsiz {
+            width: 80%;
+        }
+    }
+    
+    @media screen and (min-width: 769px) and (max-width: 1025px) {
+        .navbar-brand {
+            height: 3%;
+            width: 12%;
+        }
+        .btndesign {
+            font-size: medium;
+        }
+        .imagedesign {
+            height: 65%;
+            width: auto;
+            margin-top: 10%;
+        }
+        .textbr {
+            font-size: larger;
+        }
+        .textcont {
+            margin-top: -30px;
+        }
+        .lead {
+            font-size: medium;
+        }
+        .caropic {
+            height: 55vh;
+        }
+        .aboutphsiz {
+            width: 90%;
+        }
+    }
+    
+    @media screen and (min-width: 1026px) {
+        .navbar-brand {
+            height: 3%;
+            width: 7%;
+        }
+        .btndesign {
+            font-size: large;
+        }
+        .imagedesign {
+            height: 90%;
+            width: auto;
+        }
+        .textbr {
+            font-size: xx-large;
+        }
+        .textcont {
+            margin-top: -30px;
+        }
+        .lead {
+            font-size: large;
+        }
+        .caropic {
+            height: 65vh;
+        }
+        .aboutphsiz {
+            width: 80%;
+        }
+    }
