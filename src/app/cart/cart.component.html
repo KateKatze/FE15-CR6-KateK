@@ -1,22 +1,22 @@
 <!-- Cart -->
 <div class="container">
     <div class="row mt-5">
-        <div class="col-lg-5 col-md-5 col-sm-11 border m-1">
+        <div class="col-lg-6 col-md-5 col-sm-11 m-1">
             <h1>Cart</h1>
-            <hr>
-            <h6> {{items.length}} items in your cart </h6>
-            <hr>
+            <hr class="hrshortone">
+            <h6> {{items.length}} item(s) in your cart </h6>
+            <hr class="hrshortone">
 
-            <div class="card mb-3" style="max-width: 540px;" *ngFor="let item of items">
+            <div class="card mb-3" *ngFor="let item of items">
                 <ul class="mt-1 mb-1" style="list-style: none;">
                     <li>
                         <div class="row g-0">
-                            <div class="col-md-4">
-                                <img [src]="item.img" class="card-img-top" alt="menu">
+                            <div class="col-md-5 col-sm-6">
+                                <img [src]="item.img" class="img-fluid rounded picscart" alt="menu">
                             </div>
-                            <div class="col-md-8">
+                            <div class="col-md-7 col-sm-6">
                                 <div class="card-body">
-                                    <h5 class="card-title"> {{item.name}} </h5>
+                                    <h5 class="card-title fontit"> {{item.name}} </h5>
                                     <p>Price: {{item.price | currency}} </p>
                                 </div>
                             </div>
@@ -26,13 +26,13 @@
                 </ul>
             </div>
         </div>
-        <div class="col-lg-5 col-md-5 col-sm-11 border m-1">
+        <div class="col-lg-5 col-md-5 col-sm-11 m-1">
             <h1>Receipt</h1>
-            <hr>
+            <hr class="hrshort">
             <p>Items price: {{itemPrice | currency}}</p>
             <p>Service fee: {{serviceFee | currency}}</p>
             <p>Discount: {{discount | currency}}</p>
-            <hr>
+            <hr class="hrshort">
             <p class="text-bold">Total price (incl. VAT) {{totalPrice | currency}}</p>
         </div>
     </div>

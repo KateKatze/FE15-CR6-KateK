@@ -31,6 +31,9 @@
         .aboutphsiz {
             width: 100%;
         }
+        .picscart {
+            width: 70%;
+        }
     }
     
     @media screen and (min-width: 426px) and (max-width: 769px) {
@@ -47,6 +50,9 @@
         }
         .aboutphsiz {
             width: 80%;
+        }
+        .picscart {
+            width: 60%;
         }
     }
     
@@ -78,6 +84,12 @@
         .aboutphsiz {
             width: 90%;
         }
+        .picscart {
+            width: 100%;
+        }
+        .fontit {
+            font-size: medium;
+        }
     }
     
     @media screen and (min-width: 1026px) {
@@ -106,5 +118,11 @@
         }
         .aboutphsiz {
             width: 80%;
+        }
+        .hrshort {
+            width: 70%;
+        }
+        .hrshortone {
+            width: 100%;
         }
     }
