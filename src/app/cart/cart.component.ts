@@ -35,7 +35,7 @@ export class CartComponent implements OnInit {
     let total: number = this.itemPrice + this.serviceFee;
     let discount: number = 0;
     if (total >= 40){
-      discount = total * 0,15;
+      discount = total * 0.15;
     }
     return discount;
   }
