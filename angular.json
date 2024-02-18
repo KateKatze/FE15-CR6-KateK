@@ -103,5 +103,8 @@
       }
     }
   },
-  "defaultProject": "cr6Kate"
+  "defaultProject": "cr6Kate",
+  "cli": {
+    "analytics": false
+  }
 }
